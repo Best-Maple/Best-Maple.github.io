@@ -1,20 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>Best Maple</title>
   
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-04T01:45:28.459Z</updated>
+  <updated>2019-12-04T03:03:28.730Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>Best Maple</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>开篇文章</title>
+    <link href="http://yoursite.com/2019/12/04/%E5%BC%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
+    <id>http://yoursite.com/2019/12/04/%E5%BC%80%E7%AF%87%E6%96%87%E7%AB%A0/</id>
+    <published>2019-12-04T02:59:23.000Z</published>
+    <updated>2019-12-04T03:03:28.730Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>感觉现在个人Blog还挺流行的，交换交换友链之类的，感觉还挺有意思于是花了两个小时，按照教程搭了一个后期准备换上自己的域名开篇也没什么想写的，目前就这样吧。以后在这里写写东西，补充学习记录吧（偶也四个CXY ^  。^）</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;pre&gt;&lt;code&gt;感觉现在个人Blog还挺流行的，交换交换友链之类的，感觉还挺有意思
+
+于是花了两个小时，按照教程搭了一个
+
+后期准备换上自己的域名
+
+开篇也没什么想写的，目前就这样吧。
+
+以后在这里写写东西，补充学习记录吧（偶也四个CXY ^  。^）&lt;/code&gt;&lt;/pr
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
