@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Best Maple</title>
-  
-  
+  <icon>https://www.gravatar.com/avatar/5f4a22b8bf10f2831eb92c1e0b89c09f</icon>
+  <subtitle>记录生活</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://best-maple.github.io/"/>
   <updated>2019-12-04T13:22:49.938Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://best-maple.github.io/</id>
   
   <author>
     <name>Best Maple</name>
-    
+    <email>1975794026@qq.com</email>
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
     <title>开篇文章</title>
-    <link href="http://yoursite.com/2019/12/04/%E5%BC%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
-    <id>http://yoursite.com/2019/12/04/%E5%BC%80%E7%AF%87%E6%96%87%E7%AB%A0/</id>
+    <link href="http://best-maple.github.io/2019/12/04/%E5%BC%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
+    <id>http://best-maple.github.io/2019/12/04/%E5%BC%80%E7%AF%87%E6%96%87%E7%AB%A0/</id>
     <published>2019-12-04T02:59:23.000Z</published>
     <updated>2019-12-04T13:22:49.938Z</updated>
     
@@ -48,8 +48,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2019/12/04/hello-world/"/>
-    <id>http://yoursite.com/2019/12/04/hello-world/</id>
+    <link href="http://best-maple.github.io/2019/12/04/hello-world/"/>
+    <id>http://best-maple.github.io/2019/12/04/hello-world/</id>
     <published>2019-12-04T01:45:28.459Z</published>
     <updated>2019-12-04T01:45:28.459Z</updated>
     
