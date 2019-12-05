@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Best Maple</title>
-  <icon>https://www.gravatar.com/avatar/5f4a22b8bf10f2831eb92c1e0b89c09f</icon>
-  <subtitle>记录生活</subtitle>
+  <icon>https://www.gravatar.com/avatar/8078ed4e45be539c9a8d384112189b44</icon>
+  <subtitle>人生短短几个秋</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://best-maple.github.io/"/>
@@ -11,7 +11,7 @@
   
   <author>
     <name>Best Maple</name>
-    <email>1975794026@qq.com</email>
+    <email>bestmaple@vip.qq.com</email>
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
