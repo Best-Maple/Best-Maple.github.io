@@ -101,4 +101,27 @@
     
   </entry>
   
+  <entry>
+    <title>测试文章加密</title>
+    <link href="http://best-maple.github.io/2016/03/30/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0%E5%8A%A0%E5%AF%86/"/>
+    <id>http://best-maple.github.io/2016/03/30/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0%E5%8A%A0%E5%AF%86/</id>
+    <published>2016-03-30T13:12:21.000Z</published>
+    <updated>2019-12-06T07:32:30.746Z</updated>
+    
+    <content type="html"><![CDATA[<div id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容">  <div class="hbe-input-container">  <input type="password" id="hbePass" placeholder="" />    <label for="hbePass">想要查看文章请联系作者,虽然可能只有百分之一的可能可以得到密码.</label>    <div class="bottom-line"></div>  </div>  <script id="hbeData" type="hbeData" data-hmacdigest="771ee56195309117587ae8ced6b91c658fc6d8a4da0d7ab0c457013ec4538e34">217548957606c33a9cef55d29981393bc4eb60435db4828d4104ac7e5978b7fbe0f54668b8248fe0e880aab3f4a7c2ed722db4806874a7564cb3463e76a66439e42183af859b7afdd6cebc551c1173b8</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    
+    <summary type="html">
+    
+      HI~
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://best-maple.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="http://best-maple.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
 </feed>
