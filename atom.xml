@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://best-maple.github.io/"/>
-  <updated>2019-12-05T05:10:27.594Z</updated>
+  <updated>2019-12-30T07:21:32.768Z</updated>
   <id>http://best-maple.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SQL查询之rowswow_number() over()</title>
+    <link href="http://best-maple.github.io/2019/12/30/SQL%E6%9F%A5%E8%AF%A2%E4%B9%8Brow_number()%20over()/"/>
+    <id>http://best-maple.github.io/2019/12/30/SQL%E6%9F%A5%E8%AF%A2%E4%B9%8Brow_number()%20over()/</id>
+    <published>2019-12-30T03:21:21.000Z</published>
+    <updated>2019-12-30T07:21:32.768Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>查询表中的数据，如果某一字段有重复则取最后一条或者第一条</p></blockquote><p>数据如下：</p><p>其中标注了三组含有重复值的字段（hphm）</p><img data-src="https://wx3.sinaimg.cn/mw690/006Et0gvgy1gaellv0bxoj316c0bugsb.jpg" class="lazyload"><p> 对其中hphm字段有重复的字段进行节选，取最后一条或第一天进行数据统计</p><blockquote><p>使用<code>row_number() over()</code>查询</p></blockquote><p>直接贴代码↓</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> d.*  </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> ( </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">select</span> *, row_number() <span class="keyword">over</span> (<span class="keyword">partition</span> <span class="keyword">by</span> hphm <span class="keyword">order</span> <span class="keyword">by</span> jylsh <span class="keyword">asc</span>) <span class="keyword">as</span> group_index </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">from</span> VehicleInfo</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">) d</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">where</span> d.group_index = <span class="number">1</span></span></pre></td></tr></table></figure><p>结果↓</p><p><img alt="查询结果" data-src="https://tvax3.sinaimg.cn/large/006Et0gvgy1gaelu2uj5tj316m02s400.jpg" class="lazyload"></p><blockquote><p>解析</p></blockquote><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> *, row_number() <span class="keyword">over</span> (<span class="keyword">partition</span> <span class="keyword">by</span> hphm <span class="keyword">order</span> <span class="keyword">by</span> jylsh <span class="keyword">asc</span>) <span class="keyword">as</span> group_index <span class="keyword">from</span> VehicleInfo</span></pre></td></tr></table></figure><p>这一条语句执行之后会产生如下数据↓ （此处为了方便查看节选部分字段）</p><p><img alt="查询结果" data-src="https://wx4.sinaimg.cn/mw690/006Et0gvgy1gaepuqrpamj30gq0cediw.jpg" class="lazyload"></p><p>为重复数据编上号，再将此结果集为目标进行查询，<code>where d.group_index = 1</code>即可得到重复数据的第一条数据，可以利用asc与desc来排序，得到最后一条或者第一条，SQL默认为Asc排序</p><blockquote><p><code>row_number() over()</code> 用法</p></blockquote><ul><li><p>语法   </p><pre><code>row_number() over(order by 排序列 asc )row_number() over(partition by 分组列 order by 排序列  asc)</code></pre></li></ul><ul><li><p>数据：<img alt="数据" data-src="https://tvax2.sinaimg.cn/large/006Et0gvgy1gaer2yoqgtj30he02bjrn.jpg" class="lazyload"></p></li><li><p>使用</p><ol><li><p>row_number() over(order by 排序列 asc )</p> <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> *,row_number() <span class="keyword">over</span>(<span class="keyword">order</span> <span class="keyword">by</span> TB_StudentInfo.S_ID) <span class="keyword">as</span> dataIndex </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span>  </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">TB_StudentInfo <span class="keyword">inner</span> <span class="keyword">join</span> TB_GradeInfo </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">on</span> </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">TB_GradeInfo.G_ID = TB_StudentInfo.S_Grade</span></pre></td></tr></table></figure><p> <img alt="查询结果" data-src="https://tva4.sinaimg.cn/large/006Et0gvgy1gaer8dblcuj30jb02d74k.jpg" class="lazyload"></p><p> 可以看到最末尾新增一列dataIndex，可以以此作为条件进行筛选</p></li><li><p>row_number() over(partition by 分组列 order by 排序列  asc)</p> <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> *,row_number() <span class="keyword">over</span>(<span class="keyword">partition</span> <span class="keyword">by</span> TB_StudentInfo.S_Sex <span class="keyword">order</span> <span class="keyword">by</span> TB_StudentInfo.S_ID) <span class="keyword">as</span> dataIndex </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span>  </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">TB_StudentInfo <span class="keyword">inner</span> <span class="keyword">join</span> TB_GradeInfo </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">on</span> </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">TB_GradeInfo.G_ID = TB_StudentInfo.S_Grade</span></pre></td></tr></table></figure><p> <img alt="查询结果" data-src="https://tva1.sinaimg.cn/large/006Et0gvgy1gaerqxa6lnj30je02n74l.jpg" class="lazyload"></p><p> 以S_Sex进行分组排序   <code>partition by S_Sex</code></p></li></ol></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;查询表中的数据，如果某一字段有重复则取最后一条或者第一条&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;数据如下：&lt;/p&gt;
+&lt;p&gt;其中标注了三组含有重复值的字段（hphm）&lt;/p&gt;
+&lt;img data-src=&quot;https://wx3.sinaimg.
+      
+    
+    </summary>
+    
+    
+      <category term="编程" scheme="http://best-maple.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="SQL" scheme="http://best-maple.github.io/tags/SQL/"/>
+    
+  </entry>
   
   <entry>
     <title>知乎问答【世界上什么最可怕】</title>
@@ -39,9 +70,9 @@
       <category term="杂谈" scheme="http://best-maple.github.io/categories/%E6%9D%82%E8%B0%88/"/>
     
     
-      <category term="见闻" scheme="http://best-maple.github.io/tags/%E8%A7%81%E9%97%BB/"/>
-    
       <category term="杂谈" scheme="http://best-maple.github.io/tags/%E6%9D%82%E8%B0%88/"/>
+    
+      <category term="见闻" scheme="http://best-maple.github.io/tags/%E8%A7%81%E9%97%BB/"/>
     
   </entry>
   
@@ -67,11 +98,11 @@
       <category term="随笔" scheme="http://best-maple.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="杂谈" scheme="http://best-maple.github.io/tags/%E6%9D%82%E8%B0%88/"/>
-    
       <category term="Hexo" scheme="http://best-maple.github.io/tags/Hexo/"/>
     
       <category term="随笔" scheme="http://best-maple.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="杂谈" scheme="http://best-maple.github.io/tags/%E6%9D%82%E8%B0%88/"/>
     
   </entry>
   
