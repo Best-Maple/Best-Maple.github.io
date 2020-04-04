@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://best-maple.github.io/"/>
-  <updated>2020-03-21T11:22:09.161Z</updated>
+  <updated>2020-04-04T08:21:45.676Z</updated>
   <id>http://best-maple.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>全国哀悼</title>
+    <link href="http://best-maple.github.io/2020/04/04/%E5%85%A8%E5%9B%BD%E5%93%80%E6%82%BC/"/>
+    <id>http://best-maple.github.io/2020/04/04/%E5%85%A8%E5%9B%BD%E5%93%80%E6%82%BC/</id>
+    <published>2020-04-04T02:00:00.000Z</published>
+    <updated>2020-04-04T08:21:45.676Z</updated>
+    
+    <content type="html"><![CDATA[<center>    <b>        <font size="48"> 深切哀悼在抗击新冠肺炎斗争中的牺牲烈士和逝世同胞 </font>    </b>    <p>        <b>            为表达全国各族人民对抗击新冠肺炎疫情斗争牺牲烈士和逝世同胞的深切哀悼，国务院发布公告，决定2020年4月4日举行全国性哀悼活动。在此期间，全国和驻外使领馆下半旗志哀，全国停止公共娱乐活动。4月4日10时起，全国人民默哀3分钟，汽车、火车、舰船鸣笛，防空警报鸣响。        </b>    </p></center><p><img alt data-src="https://tva1.sinaimg.cn/large/006Et0gvgy1gdhsrfw6m5j30hs0tzn2g.jpg" class="lazyload"></p><center>    <b>        <font size="48"> 愿逝者安息，愿生者奋发，愿祖国昌盛。 </font>    </b></center>]]></content>
+    
+    <summary type="html">
+    
+      为表达全国各族人民对抗击新冠肺炎疫情斗争牺牲烈士和逝世同胞的深切哀悼，国务院发布公告，决定2020年4月4日举行全国性哀悼活动。在此期间，全国和驻外使领馆下半旗志哀，全国停止公共娱乐活动。4月4日10时起，全国人民默哀3分钟，汽车、火车、舰船鸣笛，防空警报鸣响。
+    
+    </summary>
+    
+    
+      <category term="杂谈" scheme="http://best-maple.github.io/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+      <category term="杂谈" scheme="http://best-maple.github.io/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
   
   <entry>
     <title>Canvas粒子特效[原生JS]</title>
