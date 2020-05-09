@@ -2991,9 +2991,8 @@ blockquote footer cite:before {
   margin: 10px 0;
   padding: 15px;
   position: relative;
-  background-color: #f9f9f9;
-  border: initial;
-  border-left: 5px solid #eee;
+  border: 1px solid #eee;
+  border-left-width: 5px;
   border-radius: 3px;
 }
 .note h2,
@@ -3035,7 +3034,6 @@ blockquote footer cite:before {
   top: 13px;
 }
 .note.default {
-  background-color: #f7f7f7;
   border-left-color: #777;
 }
 .note.default h2,
@@ -3050,7 +3048,6 @@ blockquote footer cite:before {
   color: #777;
 }
 .note.primary {
-  background-color: #f5f0fa;
   border-left-color: #6f42c1;
 }
 .note.primary h2,
@@ -3065,7 +3062,6 @@ blockquote footer cite:before {
   color: #6f42c1;
 }
 .note.info {
-  background-color: #eef7fa;
   border-left-color: #428bca;
 }
 .note.info h2,
@@ -3080,7 +3076,6 @@ blockquote footer cite:before {
   color: #428bca;
 }
 .note.success {
-  background-color: #eff8f0;
   border-left-color: #5cb85c;
 }
 .note.success h2,
@@ -3095,7 +3090,6 @@ blockquote footer cite:before {
   color: #5cb85c;
 }
 .note.warning {
-  background-color: #fdf8ea;
   border-left-color: #f0ad4e;
 }
 .note.warning h2,
@@ -3110,7 +3104,6 @@ blockquote footer cite:before {
   color: #f0ad4e;
 }
 .note.danger {
-  background-color: #fcf1f2;
   border-left-color: #d9534f;
 }
 .note.danger h2,
