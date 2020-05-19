@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>JayC</title>
+  <title>JeffC</title>
   <icon>https://www.gravatar.com/avatar/8078ed4e45be539c9a8d384112189b44</icon>
   <subtitle>人生短短几个秋</subtitle>
   <link href="/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>http://best-maple.github.io/</id>
   
   <author>
-    <name>JayC</name>
+    <name>JeffC</name>
     <email>bestmaple@vip.qq.com</email>
   </author>
   
